@@ -2,7 +2,7 @@ const output = document.getElementById("output");
 const tokenKey = "ttm_token";
 
 function getToken() {
-  return localStorage.getItem(tokenKey);
+  return sessionStorage.getItem(tokenKey);
 }
 
 function write(data) {
