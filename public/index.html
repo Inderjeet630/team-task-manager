@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Task Manager</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Team Task Manager</h1>
+      <p class="subtitle">Signup/Login, Projects, Members, Tasks, Dashboard</p>
+
+      <section class="card">
+        <h2>Auth</h2>
+        <div class="grid">
+          <input id="name" placeholder="Name (for signup)" />
+          <input id="email" placeholder="Email" />
+          <input id="password" type="password" placeholder="Password" />
+        </div>
+        <div class="row">
+          <button id="signupBtn">Signup</button>
+          <button id="loginBtn">Login</button>
+          <button id="meBtn">Get Me</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Projects</h2>
+        <div class="grid">
+          <input id="projectName" placeholder="Project name" />
+          <input id="projectDescription" placeholder="Project description" />
+        </div>
+        <div class="row">
+          <button id="createProjectBtn">Create Project</button>
+          <button id="listProjectsBtn">List My Projects</button>
+        </div>
+        <div class="grid">
+          <input id="memberProjectId" placeholder="Project ID" />
+          <input id="memberEmail" placeholder="Member email" />
+          <select id="memberRole">
+            <option value="member">member</option>
+            <option value="admin">admin</option>
+          </select>
+        </div>
+        <div class="row">
+          <button id="addMemberBtn">Add/Update Member</button>
+          <button id="listMembersBtn">List Members</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Tasks</h2>
+        <div class="grid">
+          <input id="taskProjectId" placeholder="Project ID" />
+          <input id="taskTitle" placeholder="Task title" />
+          <input id="taskDescription" placeholder="Task description" />
+          <input id="taskAssignedTo" placeholder="Assign to user ID (optional)" />
+          <input id="taskDueDate" type="date" placeholder="Due date" />
+        </div>
+        <div class="row">
+          <button id="createTaskBtn">Create Task (Admin)</button>
+          <button id="listTasksBtn">List Project Tasks</button>
+        </div>
+        <div class="grid">
+          <input id="updateTaskId" placeholder="Task ID" />
+          <select id="updateStatus">
+            <option value="todo">todo</option>
+            <option value="in_progress">in_progress</option>
+            <option value="done">done</option>
+          </select>
+        </div>
+        <div class="row">
+          <button id="updateTaskBtn">Update Task Status</button>
+          <button id="dashboardBtn">My Dashboard</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Response</h2>
+        <pre id="output"></pre>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
